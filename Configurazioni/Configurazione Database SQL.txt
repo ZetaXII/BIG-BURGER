@@ -1,0 +1,68 @@
+DROP DATABASE IF EXISTS bigBurger;
+CREATE DATABASE bigBurger;
+USE bigBurger;
+
+CREATE TABLE utente
+(
+	id int(11) primary key not null auto_increment,
+    nome varchar(20) not null,
+    cognome varchar(30) not null,
+    telefono varchar(15),
+    email varchar(50) not null,
+    psw varchar(30) not null,
+    ruolo varchar(1) not null
+);
+
+CREATE TABLE tipologia
+(
+	nome varchar(20) primary key not null
+);
+
+CREATE TABLE prodotto
+(
+	id int(11) primary key auto_increment not null,
+    nome varchar(30) not null,
+    descrizione varchar(120) not null,
+    tipologia varchar(20) not null,
+    prezzo double not null,
+    sconto int(3),
+    
+    FOREIGN KEY (tipologia) REFERENCES tipologia(nome)
+);
+
+create table categoria
+(
+	nome varchar(30) primary key not null
+);
+
+create table locale
+(
+	id int(11) primary key auto_increment not null,
+    nome varchar(30) not null,
+    provincia varchar(30) not null,
+    categoria varchar(20) not null,
+    telefono varchar(15),
+    
+    foreign key (categoria) references categoria(nome)
+);
+
+create table prodotto
+(
+	id int(11) primary key auto_increment not null,
+    nome varchar(30) not null,
+    descrizione varchar(80) not null,
+    prezzo double not null,
+    sconto int(3),
+    locale int(11) not null,
+    immagine blob,
+    
+    foreign key (locale) references locale(id)
+);
+
+
+
+INSERT INTO utente VALUES(id,"Mario","Zaccardi","3421483106","zakmar@hotmail.it","1234",'A');
+INSERT INTO utente VALUES(id,"Mario","Zaccardi","3421483106","zakmar1201@gmail.com","1234",'U');
+insert into categoria values("pizzeria"),("ristorante"),("gelateria");
+
+insert into locale values(id,"mammamia","Caserta","pizzeria","123456789"),(id,"bell","Caserta","ristorante","123456789");

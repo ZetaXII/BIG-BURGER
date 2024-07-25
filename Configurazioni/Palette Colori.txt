@@ -1,0 +1,5 @@
+PALETTE COLORI:
+#ffffff
+#e2d8ce
+#ed7901
+#502314

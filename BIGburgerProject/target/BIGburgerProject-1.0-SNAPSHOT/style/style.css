@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:300,400,700,800|Open+Sans:300");
+
+/*modifico barra di scorrimento*/
+
+::-webkit-scrollbar{width: 12px;}
+
+::-webkit-scrollbar-track{background-color: #0e0e0e;}
+
+::-webkit-scrollbar-thumb{background-color: #f7701b; border-radius: 200px; border: 2px solid #0e0e0e}
+
+.titolo{font-family: "Montserrat", sans-serif; color: #0e0e0e; font-weight: 800;}
+
+#messaggioErrore{display: none;}
+
+.container-informazioni{min-width: 100%; width: 100%; border: #0e0e0e; border-top-right-radius: 18px; border-top-left-radius: 18px; background-color: #0e0e0e; min-height: 400px; margin-top: 5%; border-top: 5px solid #f7701b;}
+
+.container-mappa{margin: 5%; border-radius: 30px;}
+
+footer{background-color: #0e0e0e;}
+
+footer a{text-decoration: none;}
+
+cariousel{height: 300px; weigth:300px;}
+
+.cover {object-fit: cover; width: 50px; height: 100px;}
+
+body{width: 100%; height: 100%; box-sizing: content-box;}
+
+.divCarrello{display: block;}
+
+.navbar{color: whitesmoke; background: #0e0e0e; border-bottom: 8px solid #f7701b; min-width: 100%; left: 0; top:0; min-height: 20%;}
+
+.menu{list-style: none; justify-content: space-between; position: absolute; left: 10%;}
+
+.menu li{display: inline; padding: 10px; left: 0; font-size: 22px; font-family: "Century Gothic";}
+
+.logo{padding: 2px; width:100px; height: 110px; margin: 10px;}
+
+.altro{list-style: none; justify-content: space-between; position: absolute; right: 5%;}
+
+.altro li{display: inline; padding: 10px; left: 0; font-size: 22px; font-family: "Century Gothic";}
+
+.opzioni{background: #0e0e0e; color: whitesmoke; border: none; text-decoration: none;}
+
+.menu li, .altro .opzioni, .menu li a{cursor: pointer; transition: all 0.2s;}
+
+.menu li:hover, .altro .opzioni:hover, .menu li a:hover{color: #f7701b;}
+
+.carrello{position: fixed; right:-300%; top:0; z-index: 9999; min-height: 100%; min-width: 45%; max-width: 100%; box-shadow: 1000px 1000px  1000px 950px black; transition: all 0.4s;}
+
+.sposta{right: 0; transition: all 0.4s}
+
+.hamburger{display: none; cursor: pointer;}
+
+.menuCompatto{display: none;}
+
+.btnChiudiCarrello{right:1%; top:1%; position: absolute; text-decoration: none; border: none; color: #f7701b; background-color: white; font-size: 50px;}
+
+@media screen and (max-width: 1250px)
+{
+    .navbar{min-height: 20%}
+
+    .menu{display: none;}
+
+    .opzioni{display: none;}
+
+    .logo{left: 0; top:0;}
+
+    .hamburger{display: block; right: 5%; font-size: 45px; position: absolute; z-index: 9999; border: none; background-color: #0e0e0e; color: whitesmoke;}
+
+    .menuCompatto{display: block; min-width: 100%; height: auto; top:-200%; background: #0e0e0e; color: whitesmoke; position: absolute; text-decoration: none; left:0; border-bottom: 8px solid #f7701b;}
+
+    .menuCompatto ul{text-decoration: none; height: auto; text-align: center; min-width: 100%; font-family: "Century Gothic";}
+
+    .menuCompatto ul li{text-decoration: none; text-decoration: none; color: whitesmoke; border: none; list-style: none; font-size: 25px; min-width: 100%;}
+
+    .menuCompatto ul li a{text-decoration: none; color: whitesmoke;}
+
+    .btnChiudiMenuCompatto{border: none; background-color: #0e0e0e; color: whitesmoke;}
+
+    .btnCarrelloCompatto{background: #f7701b; border: none; color: #0e0e0e;}
+
+    .carrello{width: 100%; left:-300%; top: 15%; z-index: 9998; box-shadow: none;}
+
+    .sposta{left: 0; transition: all 0.4s; height: 20%; z-index: 9989;}
+
+    .mostra{top: 0%; transition: all 0.4s; z-index: 999999; position: absolute;}
+
+    .nascondi{top: -200%; transition: all 0.4s; z-index: 999999;}
+
+}
+
+/* STYLE PER NUOVI ARRIVI */
+
+.container-prodotto{margin-left: 1%; margin-top: 5%; margin-right: 1%; display: flex; flex-wrap: wrap; justify-content: space-evenly;}
+
+.prodotto{width:700px; height: 200px; border-radius: 8px; position: relative; margin: 1%; background-color: whitesmoke; color: #000000; border: 5px solid whitesmoke; cursor: pointer; box-shadow: -1px -1px 14px -2px #0e0e0e; transition: all 0.3s;}
+
+.prodotto .prezzo-prodotto{font-size: 32px; top:70%; position: absolute;}
+
+.prodotto a{text-decoration: none;}
+
+.prodotto .testo-prodotto{width: 60%; margin-top:1%;}
+
+.prodotto h1{font-size: 30px;}
+
+.prodotto p{font-size: 18px;}
+
+.prodotto h1, .prodotto p{margin-left: 3%; text-align: left;}
+
+.prodotto .img-prodotto{width: 180px; height: 180px; max-width: 180px; max-height: 180px; border-radius: 200px; box-shadow: -1px -1px 14px -2px #0e0e0e; margin-left: 50%; position: absolute; left: 20%; top:30px; transition-delay: 0.1s; transition: all 0.3s ease;}
+
+.prodotto:hover{box-shadow: -1px -1px 30px -2px #0e0e0e; transition: all 0.3s;}
+
+@media screen and (max-width: 680px)
+{
+    .prodotto h1{font-size: 25px;}
+
+    .prodotto p{font-size: 15px;}
+
+    .cover-img{width: 100px; height: 100px; max-width: 110px; max-height: 110px;}
+
+    .prodotto .img-prodotto{width: 100px; height: 100px; max-width: 110px; max-height: 110px; z-index: 9999;}
+
+    .prodotto .prezzo-prodotto{font-size: 32px; top:70%; right: 10%; position: absolute;}
+}
+
+/* STYLE PER INFO PRODOTTO */
+
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:300,400,700,800|Open+Sans:300");
+
+.titolo{margin:30px;}
+
+.nome-infoProdotto{font-family: "Montserrat", sans-serif; color: #0e0e0e;text-align: left;  font-weight: 800; width:80%; padding: 5px;}
+
+.tipo-infoProdotto{font-family: "Montserrat", sans-serif; color: #0e0e0e; font-size: 38px; text-align: left;  font-weight: 300; padding: 5px;}
+
+.infoProdotto{}
+
+.infoProdotto img{width:300px; height:300px; border-radius:300px;}
+
+.infoProdotto .descrizione{font-family: "Montserrat"; color: #0e0e0e; width:100%; margin-top: 10px; font-weight: 100; padding:20px;}
+
+.infoProdotto .prezzo{font-family: "Montserrat", sans-serif; color: #0e0e0e; font-weight: 600;}
+
+.container-infoProdotto{box-shadow: 6px 5px 20px 4px #0e0e0e; padding:10px;}
+
+.container-infoProdotto a button{background-color: #f7701b; border:none; font-size: 22px; width: 100%;}
+
+/* STYLE PER MENU */
+
+.nome-menu{font-family: "Montserrat", sans-serif; color: #0e0e0e; text-align: left;  font-weight: 800; padding: 5px;}
+
+.descrizione-menu{font-family: "Montserrat"; color: #0e0e0e; margin-top: 10px; font-weight: 100; text-align: left;}
+
+.prezzo-menu{font-family: "Montserrat"; color: #0e0e0e; margin-top: 10px; font-weight: 600; text-align: left;}
+
+.titolo-riga{border-bottom: 5px solid #f7701b; background-color: #0e0e0e;!important;}
+
+.img-prodottoMenu{width:120px; height:120px; border-radius: 120px;}
+
+.btn-dark{background-color: #0e0e0e; !important;}
+
+/* STYLE PER COMMENTI */
+
+.container-commento{border-radius:6px; box-shadow: -1px 1px 14px -2px black; padding:10px; padding:20px; margin-bottom: 30px;}
+
+.utente-commento{display: inline-block; width:100%;}
+
+.utente-commento .img-utente{float:left; max-width: 80%;}
+
+.utente-commento .nome-utente{float:left; max-width: 100%; padding-left:20px; margin-top: 10px;}
+
+.descrizione-commento{margin-bottom: 10px;}
+
+.img-utente{width: 42px; border-radius: 60px; border: 1px solid black;}
+
+.stelle{color: #F7701BFF;}
+
+.resoconto-commenti{box-shadow: -1px -1px 14px -2px #0e0e0e; padding: 30px; border-radius: 8px;}
+
+.resoconto-commenti th{font-size: 30px;}
+
+.resoconto-commenti td{font-size: 20px;}
+
+.commento a button, .commento input[type=submit]{border:none; font-size: 22px; width: 100%;}
+
+.commento textarea {border:1px solid black; width: 100%;}
+
+/* STYLE PER INFO ORDINE */
+
+.resoconto-ordine{box-shadow: -1px -1px 14px -2px #0e0e0e; padding: 30px; border-radius: 8px;}
+
+.progress{box-shadow: -1px -1px 8px -4px #0e0e0e;}
+
+#barra{width: 0%; background-color: #f7701b;}
+
+/* STYLE PER INFO UTENTE */
+
+.container-infoUtente{box-shadow: -1px -1px 14px -2px #0e0e0e; padding: 30px; border-radius: 8px;}
+
+.img-infoUtente{width:15%; border-radius: 100%; border: 1px solid black;}
+
+
+
+
+
